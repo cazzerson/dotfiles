@@ -1,0 +1,53 @@
+color xoria256
+
+set backupdir^=~/.vim-content/_backup//    " where to put backup files.
+if has("persistent_undo")
+  set undodir^=~/.vim-content/_undo//
+  set undofile
+endif
+set directory^=~/.vim-content/_temp//      " where to put swap fileses.
+
+if (!has("nvim"))
+    set viminfo='100,n$HOME/.vim-content/_info/viminfo
+endif
+
+let g:signify_vcs_list = ['git', 'svn']
+
+let g:syntastic_php_phpcs_args="--standard=PSR2 -n --report=csv"
+
+fun! MyAddToFileType(ft)
+  if index(split(&ft, '\.'), a:ft) == -1
+    let &ft .= '.'.a:ft
+  endif
+endfun
+au FileType markdown call MyAddToFileType('mkd')
+au FileType mkd      call MyAddToFileType('markdown')
+let g:vim_markdown_initial_foldlevel=1
+
+nnoremap <leader><space> :noh<cr>
+
+let g:pencil#wrapModeDefault = 'soft'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
+" Fix for editing crontab
+" http://vim.wikia.com/wiki/Editing_crontab
+set backupskip=/tmp/*,/private/tmp/*
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 14
+  elseif has("gui_macvim")
+    set guifont=Inconsolata:h14,Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Inconsolata:h14,Consolas:h11:cANSI
+  endif
+endif
+
+set expandtab smarttab

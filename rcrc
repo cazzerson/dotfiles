@@ -1,0 +1,4 @@
+TAGS="vim zsh emacs misc"
+DOTFILES_DIRS="$HOME/.dotfiles"
+SYMLINK_DIRS="vim janus zim iTerm2-Color-Schemes emacs.d"
+EXCLUDES="update-submodules.sh README.md Gemfile* .git* hooks"

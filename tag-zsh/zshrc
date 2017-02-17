@@ -1,0 +1,17 @@
+alias vim="mvim -v"
+alias vi="vim"
+alias brewu='brew update && brew upgrade'
+alias rbbe='bundle exec'
+alias rbbu='bundle update'
+alias rbbi='bundle install'
+
+#
+# User configuration sourced by interactive shells
+#
+
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
+export PATH="/usr/local/sbin:$PATH" # homebrew
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

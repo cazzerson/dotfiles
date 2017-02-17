@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Initialize Janus
+cd ~/.vim
+rake
