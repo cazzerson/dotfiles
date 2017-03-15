@@ -70,6 +70,9 @@ Backup and remove any of the following files:
 1. Re-run the `rcup` commands after each fetch
 2. You may run to run `rcup -vf` after major changes. This will force overwrites of targeted files.
 
+### Setting zsh as the default shell (optional)
+
+1. sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 ### Setting MacOS defaults (optional)
 
 1. `~/.macos-defaults`
