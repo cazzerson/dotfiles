@@ -5,6 +5,12 @@ alias rbbe='bundle exec'
 alias rbbu='bundle update'
 alias rbbi='bundle install'
 
+# Prettify ripgrep
+function rg()
+{
+   command rg -p "$@" | less -RFX
+}
+
 #
 # User configuration sourced by interactive shells
 #
