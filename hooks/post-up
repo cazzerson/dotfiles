@@ -1,5 +1,11 @@
 #!/bin/sh
 
 # Initialize Janus
-cd ~/.vim
+pushd ~/.vim
 rake
+popd
+
+# Update syntax files
+pushd ~/.janus/vim-polyglot
+./build
+popd
