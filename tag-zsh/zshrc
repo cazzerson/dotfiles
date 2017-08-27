@@ -8,7 +8,7 @@ alias rbbi='bundle install'
 # Prettify ripgrep
 function rg()
 {
-   command rg -p "$@" | less -RFX
+   command rg -pC2 "$@" | less -RFX
 }
 
 #
