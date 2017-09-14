@@ -20,6 +20,7 @@ if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
 export PATH="/usr/local/sbin:$PATH" # homebrew
+export PATH="/usr/local/opt/python/libexec/bin:$PATH" # homebrew python
 export EDITOR="vim"
 
 # Load rbenv automatically by appending
