@@ -47,14 +47,14 @@
   done
 
   # syntax-highlighting
-  for file in ${zim_mods}/syntax-highlighting/external/highlighters/**/*.zsh; do
+  for file in ${zim_mods}/syntax-highlighting/external/highlighters/**^test-data/*.zsh; do
     zcompare ${file}
   done
   zcompare ${zim_mods}/syntax-highlighting/external/zsh-syntax-highlighting.zsh
 
   # zsh-histery-substring-search
   zcompare ${zim_mods}/history-substring-search/external/zsh-history-substring-search.zsh
-  
+
 
 ) &!
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
