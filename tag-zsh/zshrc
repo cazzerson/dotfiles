@@ -1,4 +1,4 @@
-alias vim="mvim -v"
+alias vim="nvim"
 alias vi="vim"
 alias brewu='brew update && brew upgrade'
 alias rbbe='bundle exec'
