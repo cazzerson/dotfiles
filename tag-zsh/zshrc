@@ -4,6 +4,7 @@ alias brewu='brew update && brew upgrade'
 alias rbbe='bundle exec'
 alias rbbu='bundle update'
 alias rbbi='bundle install'
+alias ag='ag -C2 --pager="less -RFX"'
 
 # Prettify ripgrep
 function rg()
