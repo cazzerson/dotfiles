@@ -92,3 +92,8 @@
     url = git@github.com:reedes/vim-pencil.git
     branch = master
     ignore = dirty
+[submodule "tag-vim/janus/bullets.vim"]
+	path = tag-vim/janus/bullets.vim
+	url = https://github.com/dkarter/bullets.vim.git
+    branch = master
+    ignore = dirty
