@@ -64,12 +64,12 @@
     ignore = dirty
 [submodule "tag-vim/vim-pencil"]
     path = tag-vim/janus/vim-pencil
-    url = git@github.com:reedes/vim-pencil.git
+    url = https://github.com/reedes/vim-pencil.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vim-polyglot"]
     path = tag-vim/janus/vim-polyglot
-    url = git@github.com:sheerun/vim-polyglot.git
+    url = https://github.com/sheerun/vim-polyglot.git
     branch = master
     ignore = dirty
 [submodule "tag-zsh/zim"]
@@ -85,11 +85,6 @@
 [submodule "tag-vim/janus/00-tabular"]
     path = tag-vim/janus/00-tabular
     url = https://github.com/godlygeek/tabular
-    branch = master
-    ignore = dirty
-[submodule "tag-vim/janus/vim-pencil"]
-    path = tag-vim/janus/vim-pencil
-    url = git@github.com:reedes/vim-pencil.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/bullets.vim"]
