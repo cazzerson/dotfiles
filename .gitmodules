@@ -15,7 +15,7 @@
     ignore = dirty
 [submodule "tag-vim/janus/vim-airline"]
     path = tag-vim/janus/vim-airline
-    url = https://github.com/bling/vim-airline.git
+    url = https://github.com/vim-airline/vim-airline.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vimux"]
@@ -74,7 +74,7 @@
     ignore = dirty
 [submodule "tag-zsh/zim"]
     path = tag-zsh/zim
-    url = https://github.com/Eriner/zim.git
+    url = https://github.com/zimfw/zimfw.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/vim"]
