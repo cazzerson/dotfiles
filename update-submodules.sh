@@ -14,7 +14,3 @@ git merge --ff-only @\{u\}
 git submodule foreach --quiet --recursive git pull origin master
 
 popd
-
-pushd tag-vim/janus/vim-polyglot
-./build
-popd
