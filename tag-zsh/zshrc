@@ -29,4 +29,6 @@ export EDITOR="vim"
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
 
-eval "$(rbenv init -)"
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init -)"
+fi
