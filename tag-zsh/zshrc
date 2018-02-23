@@ -1,4 +1,6 @@
-alias vim="nvim"
+if (( $+commands[nvim] )); then
+  alias vim="nvim"
+fi
 alias vi="vim"
 alias brewu='brew update && brew upgrade'
 alias rbbe='bundle exec'
