@@ -1,3 +1,6 @@
-require 'rubygems'
-require 'interactive_editor'
+# coding:utf-8 vim:ft=ruby
+
+Pry.config.pager = true
+Pry.config.color = true
+Pry.config.history.should_save = true
 Pry.config.editor = "vim"
