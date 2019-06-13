@@ -87,3 +87,7 @@
 	url = https://github.com/dkarter/bullets.vim.git
     branch = master
     ignore = dirty
+[submodule "tag-vim/janus/securemodelines"]
+	path = tag-vim/janus/securemodelines
+	url = git@github.com:ciaranm/securemodelines.git
+    ignore = dirty

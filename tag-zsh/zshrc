@@ -1,4 +1,4 @@
-if (( $+commands[nv] )); then
+if (( $+commands[nvim] )); then
   alias vim="nvim"
 fi
 alias vi="vim"
