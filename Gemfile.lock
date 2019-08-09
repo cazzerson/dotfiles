@@ -9,7 +9,7 @@ GEM
     mixlib-cli (1.7.0)
     mixlib-config (2.2.18)
       tomlrb
-    rake (12.3.2)
+    rake (12.3.3)
     tomlrb (1.2.8)
 
 PLATFORMS
