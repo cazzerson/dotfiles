@@ -27,6 +27,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export PATH="/usr/local/sbin:$PATH" # homebrew
 export PATH="/usr/local/opt/python/libexec/bin:$PATH" # homebrew python
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # homebrew coreutils
+export PATH=~/.composer/vendor/bin:$PATH # PHP Composer
 export EDITOR="vim"
 
 # Load rbenv automatically by appending
