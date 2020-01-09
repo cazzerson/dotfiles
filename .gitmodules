@@ -67,11 +67,6 @@
     url = https://github.com/reedes/vim-pencil.git
     branch = master
     ignore = dirty
-[submodule "tag-zsh/zim"]
-    path = tag-zsh/zim
-    url = https://github.com/zimfw/zimfw.git
-    branch = master
-    ignore = dirty
 [submodule "tag-vim/vim"]
     path = tag-vim/vim
     url = https://github.com/carlhuda/janus.git
