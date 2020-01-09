@@ -45,9 +45,8 @@ Backup and remove any of the following files:
 4. `brew bundle`
 5. `gem install bundler`
 6. `bundle install`
-7. `zsh update-submodules.sh`
-8. `ln -s ~/.dotfiles/rcrc ~/.rcrc`
-9. `cd`
+7. `ln -s ~/.dotfiles/rcrc ~/.rcrc`
+8. `cd`
 
 ### Everything
 
@@ -70,17 +69,22 @@ Backup and remove any of the following files:
 1. Re-run the `rcup` commands after each fetch
 2. You may run to run `rcup -vf` after major changes. This will force overwrites of targeted files.
 
+### Install and update modules
+
+1. `zsh -i update-submodules.zsh`
+
 ### Setting zsh as the default shell (optional)
 
 1. sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
-### Setting MacOS defaults (optional)
+
+##u Setting MacOS defaults (optional)
 
 1. `~/.macos-defaults`
 
 ## Updating configs
 
 1. `git pull origin master`
-2. `zsh update-submodules.sh`
+2. `zsh -i update-submodules.zsh`
 3. Follow `rcup` instructions above
 
 ## Notes
