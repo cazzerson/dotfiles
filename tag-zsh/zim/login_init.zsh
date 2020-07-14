@@ -10,16 +10,14 @@
   fi
 
   # Compile Zsh startup files
-  for zfile in ${1} ${ZDOTDIR:-${HOME}}/.z(shenv|profile|shrc|login|logout)(N-.); do
+  for zfile in ${ZDOTDIR:-${HOME}}/.z(shenv|profile|shrc|login|logout)(N-.); do
     zrecompile -p ${1} ${zfile} || return 1
   done
 
   # Compile Zim scripts
-  for zfile in ${ZIM_HOME}/(^*test*/)#*.zsh(|-theme)(N-.); do
+  for zfile in /Users/casden/.zim/(^*test*/)#*.zsh(|-theme)(N-.); do
     zrecompile -p ${1} ${zfile} || return 1
   done
 
-  if [[ ${1} != -q ]]; then
-    print -P 'Done with compile.'
-  fi
+  if [[ ${1} != -q ]] print -P 'Done with compile.'
 } "${@}"
