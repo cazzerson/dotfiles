@@ -21,7 +21,7 @@ export PATH="/usr/local/sbin:$PATH" # homebrew
 export PATH="/usr/local/opt/python/libexec/bin:$PATH" # homebrew python
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # homebrew coreutils
 export PATH=~/.composer/vendor/bin:$PATH # PHP Composer
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
