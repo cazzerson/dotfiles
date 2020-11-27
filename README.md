@@ -6,7 +6,6 @@ This will install more packages than you probably want.
 
 * [Janus](https://github.com/carlhuda/janus)
 * [Zim](https://github.com/Eriner/zim)
-* [Spacemacs](https://github.com/syl20bnr/spacemacs)
 
 ## Prerequisites
 
