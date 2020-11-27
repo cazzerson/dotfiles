@@ -52,11 +52,6 @@
     url = junegunn/limelight.vim.git
     branch = master
     ignore = dirty
-[submodule "tag-emacs/emacs.d"]
-    path = tag-emacs/emacs.d
-    url = syl20bnr/spacemacs
-    branch = master
-    ignore = dirty
 [submodule "tag-vim/janus/vim-airline-themes"]
     path = tag-vim/janus/vim-airline-themes
     url = vim-airline/vim-airline-themes.git
