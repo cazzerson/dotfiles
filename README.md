@@ -82,7 +82,7 @@ Backup and remove any of the following files:
 
 ## Updating configs
 
-1. `git pull origin master`
+1. `git pull origin main`
 2. `zsh -i update-submodules.zsh`
 3. Follow `rcup` instructions above
 
