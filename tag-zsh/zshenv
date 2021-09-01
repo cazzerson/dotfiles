@@ -4,3 +4,6 @@
 
 # Define Zim location
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+JAVA_HOME=$(/usr/libexec/java_home)
+

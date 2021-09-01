@@ -81,3 +81,10 @@
 	path = tag-vim/janus/securemodelines
 	url = ciaranm/securemodelines.git
     ignore = dirty
+[submodule "tag-vim/janus/fzf.vim"]
+	path = tag-vim/janus/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+    ignore = dirty
+[submodule "tag-vim/janus/ale"]
+	path = tag-vim/janus/ale
+	url = git@github.com:dense-analysis/ale.git

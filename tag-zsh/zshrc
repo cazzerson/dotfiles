@@ -10,6 +10,7 @@ alias rbbe='bundle exec'
 alias rbbu='bundle update'
 alias rbbi='bundle install'
 alias ag='ag -C2 --pager="less -RFX"'
+alias cat='bat --pager=never'
 
 # Prettify ripgrep
 function rg()
@@ -112,6 +113,13 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 #
 zstyle ':zim:ssh' ids 'id_rsa'
 
+
+#
+# degit
+#
+zstyle ':zim:zmodule' use 'degit'
+
+
 # ------------------
 # Initialize modules
 # ------------------
@@ -152,3 +160,5 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
