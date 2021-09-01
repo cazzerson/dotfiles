@@ -1,32 +1,35 @@
 archive
 =======
 
-Provides `archive` and `unarchive` functions for easy archive manipulation.
+Provides `archive`, `unarchive` and `lsarchive` functions for easy archive manipulation.
 
-This module will make use of `pigz` and `pbzip2` if available to make use of all available CPU cores.
+Suffix aliases are also provided, so files can be directly unarchived.
+
+This module will make use of `pbzip2` and `pigz` if available to make use of all available CPU cores.
 
 Functions
 ---------
 
-  * `archive` generates an archive based on file extension. Syntax is `archive myarchive.tar.gz /path/to/archive`
-  * `unarchive` unarchives files based on the extensions. Syntax is `unarchive myarchive.7z`
+  * `archive` generates an archive based on file extension. Syntax is `archive myarchive.tar.gz /path/to/be/archived`
+  * `unarchive` unarchives files based on the extensions. Syntax is `unarchive myarchive.tar.gz`
+  * `lsarchive` lists archives contents based on the extensions. Syntax is `lsarchive myarchive.tar.gz`
 
 Archive formats
 ---------------
 
 | Format | Requirements |
 | ------ | ------------ |
+| .7z, .001 | `7za` |
+| .rar | `rar` or `unrar` |
+| .tar.bz, .tar.bz2, .tbz, .tbz2 | `tar` |
+| .tar.gz, .tgz | `tar` |
+| .tar.lzma, .tlz | `tar` with lzma support or with `lzcat` |
+| .tar.xz, .txz | `tar` with xz support or with `xzcat` |
 | .tar | `tar` |
-| .tar.gz, .tgz | `tar` or `pigz` |
-| .tar.bz, .tar.bz2, .tbz, .tbz2 | `tar` or `pbzip2` |
-| .tar.xz, .txz | `tar` with xz support |
-| .tar.zma, .tlz | `tar` with lzma support |
-| .gz | `gunzip` or `pigz` |
-| .bz, .bz2 | `bunzip2` or `pbzip2` |
-| .xz | `unxz` |
-| .lzma | `unzlma` |
-| .Z | `uncompress` |
-| .zip | `unzip` |
-| .rar | `unrar` or `rar` |
-| .7z | `7za` |
+| .zip | `zip` and `unzip` |
 | .zst | `zstd` |
+| .bz, .bz2 | `pbunzip2` or `bunzip2` |
+| .gz | `unpigz` or `gunzip` |
+| .lzma | `unzlma` |
+| .xz | `unxz` |
+| .Z | `uncompress` |

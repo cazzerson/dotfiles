@@ -17,7 +17,9 @@ Aliases
   * `brewl` lists installed formulae.
   * `brewL` lists installed formulae that don't depend on other installed formula.
   * `brewo` lists outdated installed formulae.
-  * `brews` performs a search of formula names and cask tokens.
+  * `brewr` reinstalls given formula.
+  * `brews` performs a search of formula names.
+  * `brewS` manages background services with macOS' launchctl daemon manager.
   * `brewu` updates Homebrew and all formulae.
   * `brewU` upgrades outdated and unpinned formulae.
   * `brewx` uninstalls a given formula.
@@ -26,13 +28,14 @@ Aliases
 ### Homebrew Cask
 
   * `cask` is short for `brew cask`.
-  * `caskd` checks for configuration issues.
   * `caske` edits given cask.
   * `caski` shows information about given cask.
   * `caskI` installs given cask.
   * `caskl` lists installed casks.
   * `casko` lists outdated installed casks.
-  * `caskU` reinstalls given cask.
+  * `caskr` reinstalls given cask.
+  * `casks` performs a search of cask tokens.
+  * `caskU` upgrades given cask or all outdated casks, if none given.
   * `caskx` uninstalls given cask.
   * `caskX` uninstalls even if given cask does not appear to be present.
   * `caskz` zaps all files associated with given cask.
