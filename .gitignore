@@ -2,3 +2,10 @@
 *.old
 *.zwc
 *.zwc.old
+~/.dotfiles/tag-zsh/zim/modules
+~/.dotfiles/tag-zsh/zim/.latest_version
+init.zsh
+init.zsh.old
+login_init.zsh
+login_init.zsh.old
+zimfw.zsh.old
