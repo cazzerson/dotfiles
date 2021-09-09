@@ -114,12 +114,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 zstyle ':zim:ssh' ids 'id_rsa'
 
 
-#
-# degit
-#
-zstyle ':zim:zmodule' use 'degit'
-
-
 # ------------------
 # Initialize modules
 # ------------------

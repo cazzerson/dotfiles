@@ -1,90 +1,91 @@
 [submodule "janus-submod"]
     path = tag-vim/vim
-    url = carlhuda/janus.git
+    url = git@github.com:carlhuda/janus.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vim-easyclip"]
     path = tag-vim/janus/vim-easyclip
-    url = svermeulen/vim-easyclip.git
+    url = git@github.com:svermeulen/vim-easyclip.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vim-startify"]
     path = tag-vim/janus/vim-startify
-    url = mhinz/vim-startify
+    url = git@github.com:mhinz/vim-startify
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vim-airline"]
     path = tag-vim/janus/vim-airline
-    url = vim-airline.git
+    url = git@github.com:vim-airline/vim-airline.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vimux"]
     path = tag-vim/janus/vimux
-    url = benmills/vimux.git
+    url = git@github.com:benmills/vimux.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/tabular"]
     path = tag-vim/janus/00-tabular
-    url = godlygeek/tabular
+    url = git@github.com:godlygeek/tabular
     ignore = dirty
 [submodule "tag-vim/janus/goyo.vim"]
     path = tag-vim/janus/goyo.vim
-    url = junegunn/goyo.vim.git
+    url = git@github.com:junegunn/goyo.vim.git
     ignore = dirty
 [submodule "tag-vim/janus/editorconfig-vim"]
     path = tag-vim/janus/editorconfig-vim
-    url = editorconfig/editorconfig-vim.git
+    url = git@github.com:editorconfig/editorconfig-vim.git
     ignore = dirty
 [submodule "tag-vim/janus/vim-lexical"]
     path = tag-vim/janus/vim-lexical
-    url = reedes/vim-lexical.git
+    url = git@github.com:reedes/vim-lexical.git
     ignore = dirty
 [submodule "tag-vim/janus/emmet-vim"]
     path = tag-vim/janus/emmet-vim
-    url = mattn/emmet-vim
+    url = git@github.com:mattn/emmet-vim
     ignore = dirty
 [submodule "tag-zsh/iTerm2-Color-Schemes"]
     path = tag-zsh/iTerm2-Color-Schemes
-    url = mbadolato/iTerm2-Color-Schemes.git
+    url = git@github.com:mbadolato/iTerm2-Color-Schemes.git
     ignore = dirty
 [submodule "tag-vim/janus/limelight.vim"]
     path = tag-vim/janus/limelight.vim
-    url = junegunn/limelight.vim.git
+    url = git@github.com:junegunn/limelight.vim.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/vim-airline-themes"]
     path = tag-vim/janus/vim-airline-themes
-    url = vim-airline/vim-airline-themes.git
+    url = git@github.com:vim-airline/vim-airline-themes.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/vim-pencil"]
     path = tag-vim/janus/vim-pencil
-    url = reedes/vim-pencil.git
+    url = git@github.com:reedes/vim-pencil.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/vim"]
     path = tag-vim/vim
-    url = carlhuda/janus.git
+    url = git@github.com:carlhuda/janus.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/00-tabular"]
     path = tag-vim/janus/00-tabular
-    url = godlygeek/tabular
+    url = git@github.com:godlygeek/tabular
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/bullets.vim"]
-	path = tag-vim/janus/bullets.vim
-	url = dkarter/bullets.vim.git
+    path = tag-vim/janus/bullets.vim
+    url = git@github.com:dkarter/bullets.vim.git
     branch = master
     ignore = dirty
 [submodule "tag-vim/janus/securemodelines"]
-	path = tag-vim/janus/securemodelines
-	url = ciaranm/securemodelines.git
+    path = tag-vim/janus/securemodelines
+    url = git@github.com:ciaranm/securemodelines.git
     ignore = dirty
 [submodule "tag-vim/janus/fzf.vim"]
-	path = tag-vim/janus/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
+    path = tag-vim/janus/fzf.vim
+    url = git@github.com:junegunn/fzf.vim.git
     ignore = dirty
 [submodule "tag-vim/janus/ale"]
-	path = tag-vim/janus/ale
-	url = git@github.com:dense-analysis/ale.git
+    path = tag-vim/janus/ale
+    url = git@github.com:dense-analysis/ale.git
+    ignore = dirty

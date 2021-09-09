@@ -4,3 +4,6 @@
 pushd ~/.vim
 rake
 popd
+
+# Initialize Zim
+zsh ~/.zim/zimfw.zsh install

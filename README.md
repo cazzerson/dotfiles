@@ -40,12 +40,13 @@ Backup and remove any of the following files:
 
 1. Clone this repo to `~/.dotfiles`
 2. `cd ~/.dotfiles`
-3. `brew tap Homebrew/bundle`
-4. `brew bundle`
-5. `gem install bundler`
-6. `bundle install`
-7. `ln -s ~/.dotfiles/rcrc ~/.rcrc`
-8. `cd`
+3. git submodule update --init --recursive --remote
+4. `brew tap Homebrew/bundle`
+5. `brew bundle`
+6. `gem install bundler`
+7. `bundle install`
+8. `ln -s ~/.dotfiles/rcrc ~/.rcrc`
+9. `cd`
 
 ### Everything
 
