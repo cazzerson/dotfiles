@@ -6,4 +6,4 @@ rake
 popd
 
 # Initialize Zim
-zsh ~/.zim/zimfw.zsh install
+zsh -i ~/.zim/zimfw.zsh install
