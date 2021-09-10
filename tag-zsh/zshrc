@@ -1,3 +1,6 @@
+# Set zim location
+export ZIM_HOME=~/.dotfiles/tag-zsh/zim
+
 #
 # User configuration sourced by interactive shells
 #
