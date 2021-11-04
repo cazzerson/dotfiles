@@ -16,7 +16,7 @@ This will install more packages than you probably want.
 * bundler
 * zsh
 * vim
-* Optional: Exuberant ctags, phpcs, other linters
+* Optional: various linters
 
 ## Preparation
 
