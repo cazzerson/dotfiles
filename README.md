@@ -41,7 +41,6 @@ Backup and remove any of the following files:
 1. Clone this repo to `~/.dotfiles`
 2. `cd ~/.dotfiles`
 3. git submodule update --init --recursive --remote
-4. `brew tap Homebrew/bundle`
 5. `brew bundle`
 6. `gem install bundler`
 7. `bundle install`
@@ -75,7 +74,7 @@ Backup and remove any of the following files:
 
 ### Setting zsh as the default shell (optional)
 
-1. sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+1. sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
 
 ##u Setting MacOS defaults (optional)
 

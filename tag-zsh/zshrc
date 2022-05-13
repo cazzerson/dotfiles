@@ -21,9 +21,10 @@ function rg()
    command rg -pC2 "$@" | less -RFX
 }
 
-export PATH="/usr/local/sbin:$PATH" # homebrew
-export PATH="/usr/local/opt/python/libexec/bin:$PATH" # homebrew python
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # homebrew coreutils
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH" # homebrew python
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH" # homebrew coreutils
 export PATH=~/.composer/vendor/bin:$PATH # PHP Composer
 export EDITOR="nvim"
 
@@ -160,4 +161,4 @@ WORDCHARS=${WORDCHARS//[\/]}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+  [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
