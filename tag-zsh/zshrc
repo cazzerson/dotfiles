@@ -40,6 +40,13 @@ fi
 # -----------------
 
 #
+# Symlinks
+#
+
+# Follow symlinks when changing directories
+setopt CHASE_LINKS
+
+#
 # History
 #
 
