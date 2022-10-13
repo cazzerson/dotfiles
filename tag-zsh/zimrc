@@ -55,3 +55,6 @@ zmodule fzf
 
 # ruby
 zmodule ruby
+
+# asdf version management
+zmodule asdf
