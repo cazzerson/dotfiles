@@ -169,3 +169,4 @@ WORDCHARS=${WORDCHARS//[\/]}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
   [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
