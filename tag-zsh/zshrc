@@ -1,6 +1,19 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Set zim location
 export ZIM_HOME=~/.dotfiles/tag-zsh/zim
 
+
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
 #
 # User configuration sourced by interactive shells
 #
@@ -89,6 +102,9 @@ WORDCHARS=${WORDCHARS//[\/]}
 # Append `../` to your input for each `.` you type after an initial `..`
 zstyle ':zim:input' double-dot-expand yes
 
+# Fetch modules with degit
+zstyle ':zim:zmodule' use 'degit'
+
 #
 # termtitle
 #
@@ -170,3 +186,6 @@ WORDCHARS=${WORDCHARS//[\/]}
 
   [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
