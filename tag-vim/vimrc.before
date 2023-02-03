@@ -13,3 +13,7 @@ let g:pymode_indent = 1
 let g:lexical#spell = 1
 
 let g:snipMate = { 'snippet_version' : 1 }
+
+if (!has("nvim"))
+  let g:ale_use_neovim_diagnostics_api = 1
+endif

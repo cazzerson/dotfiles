@@ -18,9 +18,6 @@ fi
 # User configuration sourced by interactive shells
 #
 
-if (( $+commands[nvim] )); then
-  alias vim="nvim"
-fi
 alias vi="vim"
 alias rbbe='bundle exec'
 alias rbbu='bundle update'
@@ -40,6 +37,10 @@ export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH" # homebrew python
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH" # homebrew coreutils
 export PATH=~/.composer/vendor/bin:$PATH # PHP Composer
 export EDITOR="nvim"
+
+if (( $+commands[nvim] )); then
+  alias vim="nvim"
+fi
 
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
