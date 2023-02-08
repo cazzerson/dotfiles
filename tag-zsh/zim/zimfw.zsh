@@ -4,7 +4,7 @@
 # MIT License
 #
 # Copyright (c) 2015-2016 Matt Hamilton and contributors
-# Copyright (c) 2016-2022 Eric Nielsen, Matt Hamilton and contributors
+# Copyright (c) 2016-2023 Eric Nielsen, Matt Hamilton and contributors
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -74,8 +74,7 @@ _zimfw_build_init() {
       fi
     done
     zpre=$'*\0'
-    print -R 'typeset -gr _zim_fpath=('${${_zfpaths#${~zpre}}:A}')'
-    if (( ${#_zfpaths} )) print 'fpath=(${_zim_fpath} ${fpath})'
+    if (( ${#_zfpaths} )) print 'fpath=('${${_zfpaths#${~zpre}}:A}' ${fpath})'
     if (( ${#zfunctions} )) print -R 'autoload -Uz -- '${zfunctions#${~zpre}}
     for zroot_dir in ${_zroot_dirs}; do
       zpre=${zroot_dir}$'\0'
@@ -406,19 +405,17 @@ _zimfw_check_dumpfile() {
   local zdumpfile zfpath zline
   zstyle -s ':zim:completion' dumpfile 'zdumpfile' || zdumpfile=${ZDOTDIR:-${HOME}}/.zcompdump
   if [[ -e ${zdumpfile} ]]; then
-    if (( ${+_zim_fpath} )); then
-      local -r zpre=$'*\0'
-      zfpath=(${${_zfpaths#${~zpre}}:A} ${fpath:|_zim_fpath})
+    if (( ${+_zim_dumpfile_fpath} )); then
+      local -r zcomps=(${^_zim_dumpfile_fpath}/^([^_]*|*~|*.zwc(|.old))(N:t))
+      IFS=$' \t' read -rA zline < ${zdumpfile} || return 1
+      if [[ ${zline[2]} -eq ${#zcomps} && ${zline[4]} == ${ZSH_VERSION} ]]; then
+        _zimfw_print -PR "%F{green})%f %B${zdumpfile}:%b Already up to date"
+      else
+        _zimfw_print -PR "%F{green})%f %B${zdumpfile}:%b New completion configuration needs to be dumped. Will do %Bclean-dumpfile%b."
+        _zimfw_clean_dumpfile
+      fi
     else
-      zfpath=(${fpath})
-    fi
-    local -r zcomps=(${^zfpath}/^([^_]*|*~|*.zwc(|.old))(N:t))
-    IFS=$' \t' read -rA zline < ${zdumpfile} || return 1
-    if [[ ${zline[2]} -eq ${#zcomps} && ${zline[4]} == ${ZSH_VERSION} ]]; then
-      _zimfw_print -PR "%F{green})%f %B${zdumpfile}:%b Already up to date"
-    else
-      _zimfw_print -PR "%F{green})%f %B${zdumpfile}:%b New completion configuration needs to be dumped. Will do %Bclean-dumpfile%b."
-      _zimfw_clean_dumpfile
+      _zimfw_print -u2 -PR "%F{yellow}! %B${zdumpfile}:%b Unable to check. This only works when the completion module is initialized."
     fi
   else
     _zimfw_print -PR "%F{green})%f %B${zdumpfile}:%b Not found"
@@ -457,7 +454,7 @@ _zimfw_compile() {
 }
 
 _zimfw_info() {
-  print -R 'zimfw version:        '${_zversion}' (built at 2022-12-18 21:05:25 UTC, previous commit is e54958b)'
+  print -R 'zimfw version:        '${_zversion}' (built at 2023-02-04 14:46:47 UTC, previous commit is 7778e97)'
   print -R 'OSTYPE:               '${OSTYPE}
   print -R 'TERM:                 '${TERM}
   print -R 'TERM_PROGRAM:         '${TERM_PROGRAM}
@@ -844,7 +841,7 @@ esac
 
 zimfw() {
   builtin emulate -L zsh -o EXTENDED_GLOB
-  local -r _zversion='1.11.0' zusage="Usage: %B${0}%b <action> [%B-q%b|%B-v%b]
+  local -r _zversion='1.11.1' zusage="Usage: %B${0}%b <action> [%B-q%b|%B-v%b]
 
 Actions:
   %Bbuild%b           Build %B${ZIM_HOME}/init.zsh%b and %B${ZIM_HOME}/login_init.zsh%b.
