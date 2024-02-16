@@ -72,11 +72,19 @@ Backup and remove any of the following files:
 
 1. `zsh -i update-submodules.zsh`
 
-### Setting zsh as the default shell (optional)
+### Setting zsh as the default shell
 
 1. sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
 
-##u Setting MacOS defaults (optional)
+### Load iTerm profile (optional)
+
+1. Load the `iTerm2/Default.json` profile config in iTerm2 `Settings -> Profiles -> Other Actions -> Import JSON Profiles`
+
+### Configure prompt and install fonts (optional)
+
+1. p10k configure
+
+### Setting MacOS defaults (optional)
 
 1. `~/.macos-defaults`
 
@@ -88,7 +96,7 @@ Backup and remove any of the following files:
 
 ## Notes
 
-* `<leader>` key is `,`
+* `<leader>` key in vim is `,`
 * This should work with neovim as well
 * Browse the `tag-vim/janus` directory for additional plugins
 
