@@ -47,8 +47,8 @@ zmodule archive
 # homebrew aliases
 zmodule homebrew
 
-# exa
-zmodule exa
+# eza ls replacement
+zmodule z-shell/zsh-eza
 
 # fzf
 zmodule fzf
